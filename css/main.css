@@ -1,0 +1,460 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	font-family: 'Exo 2', sans-serif;
+	color: #f2f2f2;
+}
+
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+#container {
+	padding: 20px 0px 40px;
+	background: #ee5866;
+}
+
+#container .social {
+	height: 50px;
+	opacity: 0;
+}
+#container .social-share {
+	text-align: center;
+	width: 100%;
+}
+#container .social-share .share-btn {
+	display: inline-block;
+	vertical-align: middle;
+	height: 50px;
+	padding: 0px 20px;
+}
+#container .social-share .gplus {
+	width: 60px;
+	max-width: 60px;
+}
+#container .social-share .share-btn .fb-share-button{
+	margin-top: 5px;
+}
+#container .social-share .share-btn .twitter-share-button,
+#container .social-share .share-btn .IN-widget {
+	margin-top: 7px;
+}
+
+#container .title {
+	font-size: 60px;
+	margin-top: 10px;
+	text-align: center;
+}
+#container .day-counter {
+	position: relative;
+	text-align: center;
+}
+#container .odometer-container {
+	position: relative;
+	width: 530px;
+	margin: auto;
+}
+#container img.java {
+	position: absolute;
+	left: -200px;
+	bottom: -90px;
+}
+#container .days-until {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 22px;
+}
+#container .tweet-this {
+	background-color: transparent;
+	border: 2px solid #f2f2f2;
+	border-radius: 4px;
+	padding: 5px 15px;
+	font-size: 18px;
+	margin-top: 20px;
+	display: inline-block;
+}
+#container .tweet-this .fa {
+	margin-right: 5px;
+	font-size: 20px;
+}
+#container .progress-bar {
+	width: 520px;
+	height: 40px;
+	margin: 95px auto 40px auto;
+	border: 4px solid #ab3d48;
+	border-radius: 4px;
+	background-image: linear-gradient(to bottom, #f2f2f2 0%, #f2f2f2 50%, #eee 51%, #eee 100%);
+	position: relative;	
+}
+#container .progress-bar .progress {
+	height: 100%;
+	width: 0%;
+	background-image: linear-gradient(to bottom, #19B6F1  0%, #19B6F1  50%, #00aeef 51%, #00aeef 100%);
+	position: relative;
+}
+#container .progress-bar .progress-end {
+	position: absolute;
+	top: -5px;
+	right: 0px;
+	width: 3px;
+	height: 50px;
+	background: #008BBF;
+}
+#container .progress-bar .divider {
+	width: 3px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 0;
+}
+#container .progress-bar .divider.feature-complete {
+	left: 180px;
+}
+#container .progress-bar .divider.all-tests-run2 {
+	left: 260px;
+}
+#container .progress-bar .divider.zero-bug-bounce {
+	left: 350px;
+}
+#container .progress-bar .divider.final-rc {
+	left: 450px;
+}
+
+#container .progress-bar .divider-txt {
+	position: absolute;
+	text-align: center;
+	font-size: 10px;
+	width: 70px;
+}
+#container .progress-bar .divider-txt.first-features {
+	left: -52px;
+	top: -58px;
+	width: 100px;
+}
+#container .progress-bar .divider-txt.feature-complete {
+	left: 285px;
+	bottom: -43px;
+	width: 90px;
+}
+#container .progress-bar .divider-txt.all-tests-run2 {
+	left: 331px;
+	top: -45px;
+}
+#container .progress-bar .divider-txt.zero-bug-bounce {
+	left: 374px;
+	bottom: -43PX;
+	width: 90px;
+}
+#container .progress-bar .divider-txt.final-rc {
+	left: 422px;
+	width: 115px;
+	top: -45px;
+}
+#container .progress-bar .divider-txt.available {
+	left: 472px;
+	bottom: -43px;
+	width: 100px;
+}
+
+
+#posts {
+	background: #00aeef;
+	text-align: center;
+	padding: 20px;
+}
+#posts h1 {
+	margin: 0px;
+	font-size: 20px;
+}
+#posts .posts-container {
+	width: 70%;
+	margin: 40px auto;
+}
+#posts .posts-container .post-container {
+	width: 30%;
+	height: 230px;
+	margin-right: 1.5%;
+	display: inline-block;
+	background: #fff;
+	color: #222;
+}
+#posts .posts-container .post-container:last-child {
+	margin-right: 0;
+}
+
+#posts .posts-container .post-container .post {
+	overflow: auto;
+}
+#posts .posts-container .post-container .post p {
+	margin: 10px;
+	font-size: 14px;
+	text-align: left;
+	display: inline-block;
+	height: 90px;
+}
+#posts .posts-container .post-container .post a {
+	color: #ee5866;
+}
+
+#posts .subscribe-form input {
+	height: 30px;
+	width: 250px;
+	line-height: 30px;
+	padding: 3px 7px;
+	text-align: center;
+	border: none;
+	border-radius: 3px;
+	color: #222;
+}
+#posts .subscribe-button {
+	height: 30px;
+	line-height: 30px;
+	padding: 3px 25px;
+	margin-left: 10px;
+	background: #ffbe26;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+#footer {
+	background: #282f32; 
+	color: #f2f2f2;
+	text-align: center;
+	line-height: 40px;
+	font-size: 13px;
+}
+
+#footer .divider {
+	margin: 0 10px;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+@media only screen and (min-width : 992px) {
+	#container img.java {
+		display: block;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+	#container img.java {
+		display: none;
+	}
+	
+	#posts .posts-container {
+		width: 80%;
+		margin: 20px auto;
+	}
+
+	#posts .posts-container .post-container {
+		height: 200px;
+	}
+}
+
+
+@media only screen and (max-width : 768px) {
+	#container .progress-bar {
+		display: block;
+		width: 475px;
+	}
+	
+	#container .progress-bar .divider-txt.feature-complete {
+		left: 256px;
+	}
+	#container .progress-bar .divider-txt.all-tests-run2 {
+		left: 299px;
+	}
+	#container .progress-bar .divider-txt.zero-bug-bounce {
+		left: 348px;
+		bottom: -57px;
+		width: 70px;
+	}
+	#container .progress-bar .divider-txt.final-rc {
+		left: 402px;
+		width: 70px;
+		top: -59px;
+	}
+	#container .progress-bar .divider-txt.available {
+		left: 441px;
+		bottom: -57px;
+		width: 70px;
+	}
+	
+	#container img.java {
+		display: none;
+	}
+	
+	#posts .posts-container {
+		width: 90%;
+		margin: 20px auto;
+	}
+
+	#posts .posts-container .post-container {
+		height: 190px;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#posts .posts-container {
+		width: 95%;
+		margin: 20px auto;
+	}
+
+	#posts .posts-container .post-container {
+		width: 100%;
+		height: auto;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	
+	#posts .posts-container .post-container .post p {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#container .social {
+		height: 30px;
+	}
+	#container .social-share .share-btn {
+		height: 30px;
+		padding: 0px 5px;
+	}
+	
+	#container .title {
+		font-size: 38px;
+	}
+	
+	#container img.java {
+		display: none;
+	}
+	
+	#container .odometer-container {
+		width: auto;
+	}
+	
+	.odometer.odometer-auto-theme, .odometer.odometer-theme-train-station {
+		font-size: 105px;
+	}
+	
+	#container .progress-bar {
+		display: none;
+	}
+	
+	
+	#posts .subscribe-form input {
+		width: 90%;
+		line-height: 30px;
+		padding: 3px 7px;
+	}
+	#posts .subscribe-button {
+		width: 90%;
+		padding: 3px 7px;
+		margin: 10px 0px;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+	#container .social {
+		height: 30px;
+	}
+	#container .social-share .share-btn {
+		height: 30px;
+		padding: 0px;
+	}
+	#container .social-share .share-btn:first-child {
+		margin-top: 9px;
+	}
+
+	#container .title {
+		font-size: 30px;
+	}
+
+	#container img.java {
+		display: none;
+	}
+
+	#container .odometer-container {
+		width: auto;
+	}
+
+	.odometer.odometer-auto-theme, .odometer.odometer-theme-train-station {
+		font-size: 80px;
+	}
+
+	#container .progress-bar {
+		display: none;
+	}
+
+
+	#posts .subscribe-form input {
+		width: 90%;
+		line-height: 30px;
+		padding: 3px 7px;
+	}
+	#posts .subscribe-button {
+		width: 90%;
+		padding: 3px 7px;
+		margin: 10px 0px;
+	}
+}
