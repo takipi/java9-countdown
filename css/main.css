@@ -181,6 +181,11 @@ a, a:hover, a:visited, a:active {
 	font-size: 10px;
 	width: 70px;
 }
+#container .progress-bar .divider-txt.jdk-modular {
+	left: 30px;
+	bottom: -43px;
+	width: 100px;
+}
 #container .progress-bar .divider-txt.first-features {
 	left: -52px;
 	top: -58px;
@@ -224,14 +229,18 @@ a, a:hover, a:visited, a:active {
 #posts .posts-container {
 	width: 70%;
 	margin: 40px auto;
+	overflow: auto;
 }
 #posts .posts-container .post-container {
 	width: 30%;
-	height: 230px;
+	float: left;
 	margin-right: 1.5%;
 	display: inline-block;
 	background: #fff;
 	color: #222;
+}
+#posts .posts-container .post-container:hover {
+	cursor: pointer;
 }
 #posts .posts-container .post-container:last-child {
 	margin-right: 0;
@@ -245,7 +254,6 @@ a, a:hover, a:visited, a:active {
 	font-size: 14px;
 	text-align: left;
 	display: inline-block;
-	height: 90px;
 }
 #posts .posts-container .post-container .post a {
 	color: #ee5866;
@@ -304,10 +312,6 @@ a, a:hover, a:visited, a:active {
 		width: 80%;
 		margin: 20px auto;
 	}
-
-	#posts .posts-container .post-container {
-		height: 200px;
-	}
 }
 
 
@@ -317,6 +321,9 @@ a, a:hover, a:visited, a:active {
 		width: 475px;
 	}
 	
+	#container .progress-bar .divider-txt.jdk-modular {
+		left: 23px;
+	}
 	#container .progress-bar .divider-txt.feature-complete {
 		left: 256px;
 	}
@@ -347,27 +354,24 @@ a, a:hover, a:visited, a:active {
 		width: 90%;
 		margin: 20px auto;
 	}
-
-	#posts .posts-container .post-container {
-		height: 190px;
-	}
 }
 
 @media only screen and (max-width: 550px) {
+	#container .progress-bar {
+		display: none;
+	}
+
+	
 	#posts .posts-container {
 		width: 95%;
 		margin: 20px auto;
 	}
 
 	#posts .posts-container .post-container {
+		float: none;
 		width: 100%;
-		height: auto;
 		margin-right: 0;
 		margin-bottom: 10px;
-	}
-	
-	#posts .posts-container .post-container .post p {
-		height: auto;
 	}
 }
 
@@ -395,11 +399,6 @@ a, a:hover, a:visited, a:active {
 	.odometer.odometer-auto-theme, .odometer.odometer-theme-train-station {
 		font-size: 105px;
 	}
-	
-	#container .progress-bar {
-		display: none;
-	}
-	
 	
 	#posts .subscribe-form input {
 		width: 90%;
