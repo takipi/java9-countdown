@@ -44,18 +44,30 @@ $(function() {
 	
 	
 	
-	
-	$('.subscribe-button').click(function() {
+	/* Subscribe to blog form */
+	$('.subscribe-button').click(function(e) {
+		e.preventDefault();
+		$(this).attr('disabled', true);
 		var email = $('#subscribeEmail').val();
-		var data = {
-			"email_address": email,
-			"status": "subscribed"
-		}
-		$.ajax({
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader ("Authorization", "Basic XXXXXX");
+		var listId = 'fdcf16a8bd';
+		var listGroup = 'Source';
+		var groupName = 'Java9.xyz';
+		var url = 'http://localhost:3000/subscribe/' + listId;
+		$.post(url, {
+			email: email,
+			listGroup: listGroup,
+			groupNames: groupName
+		}, function(response) {
+			if (response.result == 'success') {
+				$('.thanks-msg').html('Thanks!');
+				$('.subscribe-form form').hide();
+				$('.thanks-msg').fadeIn();
+			} else if (response.result == 'already-subscribed') {
+				$('.thanks-msg').html("You were already subscribed to this list, thanks!");
+				$('.subscribe-form form').hide();
+				$('.thanks-msg').fadeIn();
 			}
-		})
+		});
 	});
 	
 	/* Post container click handler */

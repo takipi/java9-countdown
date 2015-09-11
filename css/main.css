@@ -278,6 +278,11 @@ a, a:hover, a:visited, a:active {
 	border-radius: 3px;
 	display: inline-block;
 }
+#posts .thanks-msg {
+	display: none;
+	text-align: center;
+	font-size: 18px;
+}
 
 #footer {
 	background: #282f32; 
