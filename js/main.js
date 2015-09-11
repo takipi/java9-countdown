@@ -49,7 +49,7 @@ $(function() {
 		e.preventDefault();
 		$(this).attr('disabled', true);
 		var email = $('#subscribeEmail').val();
-		var listId = 'fdcf16a8bd';
+		var listId = 'c8411940bf';
 		var listGroup = 'Source';
 		var groupName = 'Java9.xyz';
 		var url = 'http://localhost:3000/subscribe/' + listId;
