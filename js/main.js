@@ -27,12 +27,14 @@ $(function() {
 	$('.progress-bar .progress').animate({ width: currentProgressWidth + '%' }, 2000);
 	
 	var daysJdkModular = 115;		// From 11-08-2014 to 03-12-2014
+	var daysStarWars = 267;			// From 11-08-2014 to 04-05-2015
 	var daysFeatureComplete = 487;	// From 11-08-2014 to 10-12-2015
 	var daysAllTestsRun2 = 543;		// From 11-08-2014 to 04-02-2016
 	var daysZeroBugs = 620;			// From 11-08-2014 to 21-04-2016
 	var daysFinalRc = 711;			// From 11-08-2014 to 21-07-2016
 
 	$('.divider.jdk-modular').css({ left: (daysJdkModular * 100 / totalDaysProgress) + '%' });
+	$('.divider.star-wars').css({ left: (daysStarWars * 100 / totalDaysProgress) + '%' });
 	$('.divider.feature-complete').css({ left: (daysFeatureComplete * 100 / totalDaysProgress) + '%' });
 	$('.divider.all-tests-run2').css({ left: (daysAllTestsRun2 * 100 / totalDaysProgress) + '%' });
 	$('.divider.zero-bug-bounce').css({ left: (daysZeroBugs * 100 / totalDaysProgress) + '%' });
@@ -52,7 +54,7 @@ $(function() {
 		var listId = 'c8411940bf';
 		var listGroup = 'Source';
 		var groupName = 'Java9.xyz';
-		var url = 'http://localhost:3000/subscribe/' + listId;
+		var url = 'http://mailchimp.takipi.com/subscribe/' + listId;
 		$.post(url, {
 			email: email,
 			listGroup: listGroup,

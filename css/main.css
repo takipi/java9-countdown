@@ -96,7 +96,7 @@ a, a:hover, a:visited, a:active {
 }
 
 #container .title {
-	font-size: 60px;
+	font-size: 55px;
 	margin-top: 10px;
 	text-align: center;
 }
@@ -181,15 +181,20 @@ a, a:hover, a:visited, a:active {
 	font-size: 10px;
 	width: 70px;
 }
+#container .progress-bar .divider-txt.first-features {
+	left: -60px;
+	top: -45px;
+	width: 120px;
+}
 #container .progress-bar .divider-txt.jdk-modular {
 	left: 30px;
 	bottom: -43px;
 	width: 100px;
 }
-#container .progress-bar .divider-txt.first-features {
-	left: -52px;
-	top: -58px;
-	width: 100px;
+#container .progress-bar .divider-txt.star-wars {
+	left: 123px;
+	top: -45px;
+	width: 115px;
 }
 #container .progress-bar .divider-txt.feature-complete {
 	left: 285px;
@@ -259,6 +264,12 @@ a, a:hover, a:visited, a:active {
 	color: #ee5866;
 }
 
+#posts .subscribe-form {
+	margin: 70px 0px 40px;
+}
+#posts .subscribe-form p {
+	font-size: 20px;
+}
 #posts .subscribe-form input {
 	height: 30px;
 	width: 250px;
@@ -326,8 +337,16 @@ a, a:hover, a:visited, a:active {
 		width: 475px;
 	}
 	
+	#container .progress-bar .divider-txt.first-features {
+		left: -55px;
+		top: -59px;
+		width: 110px;
+	}
 	#container .progress-bar .divider-txt.jdk-modular {
 		left: 23px;
+	}
+	#container .progress-bar .divider-txt.star-wars {
+		left: 108px;
 	}
 	#container .progress-bar .divider-txt.feature-complete {
 		left: 256px;
