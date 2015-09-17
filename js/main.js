@@ -1,5 +1,9 @@
 $(function() {
 	
+	/* 
+	 * Simple function to calculate how many days are between today and
+	 * the release date: 2016-09-22
+	 */
 	var getDaysUntilRelease = function() {
 		var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
 		var releaseDate = new Date(2016,09,22);
@@ -8,7 +12,6 @@ $(function() {
 		var diffDays = Math.round(Math.abs((releaseDate.getTime() - today.getTime())/(oneDay)));
 		return diffDays;
 	};
-	
 	var days = getDaysUntilRelease();
 	
 	/** Init Odometer **/
@@ -19,8 +22,10 @@ $(function() {
 	});
 	odometer.update(days);
 	
-	
-	
+	/**
+	 * Calculate alignment for progress bar breakpoints based on the amount of
+	 * days in between
+	 */
 	var progressFullWidth = $('.progress-bar').width();
 	var totalDaysProgress = 774; // From 11-08-2014 to 22-09-2016 which is the release date
 	var currentProgressWidth = 100 - ((days * 100) / totalDaysProgress);
@@ -32,7 +37,6 @@ $(function() {
 	var daysAllTestsRun2 = 543;		// From 11-08-2014 to 04-02-2016
 	var daysZeroBugs = 620;			// From 11-08-2014 to 21-04-2016
 	var daysFinalRc = 711;			// From 11-08-2014 to 21-07-2016
-
 	$('.divider.jdk-modular').css({ left: (daysJdkModular * 100 / totalDaysProgress) + '%' });
 	$('.divider.star-wars').css({ left: (daysStarWars * 100 / totalDaysProgress) + '%' });
 	$('.divider.feature-complete').css({ left: (daysFeatureComplete * 100 / totalDaysProgress) + '%' });
@@ -40,6 +44,7 @@ $(function() {
 	$('.divider.zero-bug-bounce').css({ left: (daysZeroBugs * 100 / totalDaysProgress) + '%' });
 	$('.divider.final-rc').css({ left: (daysFinalRc * 100 / totalDaysProgress) + '%' });
 	
+	/* Setup "Tweet this" button action */
 	var tweetText = 'Only ' + days + ' days left until #Java9 is released!';
 	$('a.twitter-share-button').attr('data-text', tweetText);
 	$('.tweet-this').attr('href', 'https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8082%2F&ref_src=twsrc%5Etfw&text=Only%20' + days + '%20days%20left%20until%20%23Java9%20is%20released!&tw_p=tweetbutton&url=http%3A%2F%2Fjava9.xyz&via=takipid')
@@ -47,9 +52,7 @@ $(function() {
 	
 	
 	/* Subscribe to blog form */
-	$('.subscribe-button').click(function(e) {
-		e.preventDefault();
-		$(this).attr('disabled', true);
+	var submitSubscribeForm = function () {
 		var email = $('#subscribeEmail').val();
 		var listId = 'c8411940bf';
 		var listGroup = 'Source';
@@ -62,14 +65,28 @@ $(function() {
 		}, function(response) {
 			if (response.result == 'success') {
 				$('.thanks-msg').html('Thanks!');
-				$('.subscribe-form form').hide();
+				$('.subscribe-form .subscribe-input').hide();
 				$('.thanks-msg').fadeIn();
 			} else if (response.result == 'already-subscribed') {
 				$('.thanks-msg').html("You were already subscribed to this list, thanks!");
-				$('.subscribe-form form').hide();
+				$('.subscribe-form .subscribe-input').hide();
 				$('.thanks-msg').fadeIn();
 			}
 		});
+	}
+	/* Enter key handler */
+	$('#subscribeEmail').on('keyup', function(e) {
+		var keycode = (e.keyCode ? e.keyCode : e.which);
+		if (keycode == '13') {
+			$('.subscribe-button').attr('disabled', true);
+			submitSubscribeForm();
+		}
+	});
+	/* Subscribe button handler */
+	$('.subscribe-button').click(function(e) {
+		e.preventDefault();
+		$(this).attr('disabled', true);
+		submitSubscribeForm();
 	});
 	
 	/* Post container click handler */
@@ -78,6 +95,7 @@ $(function() {
 		window.open(link);
 	});
 	
+	/* Delay the loading of the social sharing buttons to make the odometer run smoothly */
 	setTimeout(function() {
 		var $social = $("<div>");
 		$social.load('social.html', function() {
