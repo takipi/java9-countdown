@@ -279,8 +279,8 @@ a, a:hover, a:visited, a:active {
 	height: 30px;
 	width: 250px;
 	line-height: 30px;
-	padding: 3px 7px;
-	text-align: center;
+	padding: 3px 10px;
+	text-align: left;
 	border: none;
 	border-radius: 3px;
 	color: #222;
@@ -436,6 +436,7 @@ a, a:hover, a:visited, a:active {
 		width: 90%;
 		line-height: 30px;
 		padding: 3px 7px;
+		text-align: center;
 	}
 	#posts .subscribe-button {
 		width: 90%;
@@ -482,6 +483,7 @@ a, a:hover, a:visited, a:active {
 		width: 90%;
 		line-height: 30px;
 		padding: 3px 7px;
+		text-align: center;
 	}
 	#posts .subscribe-button {
 		width: 90%;
