@@ -128,6 +128,9 @@ a, a:hover, a:visited, a:active {
 	margin-top: 20px;
 	display: inline-block;
 }
+#container .tweet-this:hover {
+	opacity:0.75;
+}
 #container .tweet-this .fa {
 	margin-right: 5px;
 	font-size: 20px;
@@ -263,7 +266,9 @@ a, a:hover, a:visited, a:active {
 #posts .posts-container .post-container .post a {
 	color: #ee5866;
 }
-
+#posts .posts-container .post-container .post:hover a {
+	text-decoration:underline;
+}
 #posts .subscribe-form {
 	margin: 70px 0px 40px;
 }
@@ -288,6 +293,9 @@ a, a:hover, a:visited, a:active {
 	background: #ffbe26;
 	border-radius: 3px;
 	display: inline-block;
+}
+#posts .subscribe-button:hover {
+	background-color:#e5ab22;
 }
 #posts .thanks-msg {
 	display: none;
