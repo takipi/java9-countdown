@@ -6,7 +6,7 @@ $(function() {
 	 */
 	var getDaysUntilRelease = function() {
 		var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-		var releaseDate = new Date(2016,09,22);
+		var releaseDate = new Date(2016,08,22);
 		var today = new Date();
 
 		var diffDays = Math.round(Math.abs((releaseDate.getTime() - today.getTime())/(oneDay)));
