@@ -6,7 +6,7 @@ $(function() {
 	 */
 	var getDaysUntilRelease = function() {
 		var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-		var releaseDate = new Date(2016,09,22);
+		var releaseDate = new Date(2016,08,22);
 		var today = new Date();
 
 		var diffDays = Math.round(Math.abs((releaseDate.getTime() - today.getTime())/(oneDay)));
@@ -47,8 +47,7 @@ $(function() {
 	/* Setup "Tweet this" button action */
 	var tweetText = 'Only ' + days + ' days left until #Java9 is released!';
 	$('a.twitter-share-button').attr('data-text', tweetText);
-	$('.tweet-this').attr('href', 'https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8082%2F&ref_src=twsrc%5Etfw&text=Only%20' + days + '%20days%20left%20until%20%23Java9%20is%20released!&tw_p=tweetbutton&url=http%3A%2F%2Fjava9.xyz&via=takipid')
-	
+	$('.tweet-this').attr('href', 'https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Only%20' + days + '%20days%20left%20until%20%23Java9%20is%20released!&tw_p=tweetbutton&url=http%3A%2F%2Fwww.java9.xyz&via=takipid')
 	
 	
 	/* Subscribe to blog form */
