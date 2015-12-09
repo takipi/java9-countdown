@@ -98,7 +98,17 @@ a, a:hover, a:visited, a:active {
 #container .title {
 	font-size: 55px;
 	margin-top: 10px;
+	margin-bottom: 5px;
 	text-align: center;
+}
+#container .subtitle {
+	font-size: 23px;
+	text-align: center;
+	margin-top:0px;
+	margin-bottom:30px;
+}
+#container .subtitle a:hover span {
+	text-decoration:underline;
 }
 #container .day-counter {
 	position: relative;
