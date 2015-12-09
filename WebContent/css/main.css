@@ -200,27 +200,27 @@ a, a:hover, a:visited, a:active {
 	width: 120px;
 }
 #container .progress-bar .divider-txt.jdk-modular {
-	left: 30px;
+	left: 15px;
 	bottom: -43px;
 	width: 100px;
 }
 #container .progress-bar .divider-txt.star-wars {
-	left: 123px;
+	left: 89px;
 	top: -45px;
 	width: 115px;
 }
 #container .progress-bar .divider-txt.feature-complete {
-	left: 285px;
+	left: 313px;
 	bottom: -43px;
 	width: 90px;
 }
 #container .progress-bar .divider-txt.all-tests-run2 {
-	left: 331px;
+	left: 363px;
 	top: -45px;
 }
 #container .progress-bar .divider-txt.zero-bug-bounce {
-	left: 374px;
-	bottom: -43PX;
+	left: 394px;
+	bottom: -56px;
 	width: 90px;
 }
 #container .progress-bar .divider-txt.final-rc {
