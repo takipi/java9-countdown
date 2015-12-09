@@ -6,7 +6,7 @@ $(function() {
 	 */
 	var getDaysUntilRelease = function() {
 		var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
-		var releaseDate = new Date(2016,08,22);
+		var releaseDate = new Date(2017,03,23);
 		var today = new Date();
 
 		var diffDays = Math.round(Math.abs((releaseDate.getTime() - today.getTime())/(oneDay)));
@@ -27,16 +27,16 @@ $(function() {
 	 * days in between
 	 */
 	var progressFullWidth = $('.progress-bar').width();
-	var totalDaysProgress = 774; // From 11-08-2014 to 22-09-2016 which is the release date
+	var totalDaysProgress = 955; // From 11-08-2014 to 23-03-2016 which is the release date
 	var currentProgressWidth = 100 - ((days * 100) / totalDaysProgress);
 	$('.progress-bar .progress').animate({ width: currentProgressWidth + '%' }, 2000);
 	
 	var daysJdkModular = 115;		// From 11-08-2014 to 03-12-2014
 	var daysStarWars = 267;			// From 11-08-2014 to 04-05-2015
-	var daysFeatureComplete = 487;	// From 11-08-2014 to 10-12-2015
-	var daysAllTestsRun2 = 543;		// From 11-08-2014 to 04-02-2016
-	var daysZeroBugs = 620;			// From 11-08-2014 to 21-04-2016
-	var daysFinalRc = 711;			// From 11-08-2014 to 21-07-2016
+	var daysFeatureComplete = 653;	// From 11-08-2014 to 25-05-2016
+	var daysAllTestsRun2 = 730;		// From 11-08-2014 to 10-08-2016
+	var daysZeroBugs = 802;			// From 11-08-2014 to 21-10-2016
+	var daysFinalRc = 876;			// From 11-08-2014 to 03-01-2017
 	$('.divider.jdk-modular').css({ left: (daysJdkModular * 100 / totalDaysProgress) + '%' });
 	$('.divider.star-wars').css({ left: (daysStarWars * 100 / totalDaysProgress) + '%' });
 	$('.divider.feature-complete').css({ left: (daysFeatureComplete * 100 / totalDaysProgress) + '%' });
