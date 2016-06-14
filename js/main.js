@@ -23,7 +23,7 @@ $(function() {
 	
 	var progressFullWidth = $('.progress-bar').width();
 	var totalDaysProgress = 774; // From 11-08-2014 to 22-09-2016 which is the release date
-	var currentProgressWidth = (days * 100) / totalDaysProgress;
+	var currentProgressWidth = 100 - ((days * 100) / totalDaysProgress);
 	$('.progress-bar .progress').animate({ width: currentProgressWidth + '%' }, 2000);
 	
 	var daysJdkModular = 115;		// From 11-08-2014 to 03-12-2014
