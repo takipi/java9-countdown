@@ -20,6 +20,18 @@
 
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	<script type="text/javascript" async src="//platform.twitter.com/widgets.js"></script>
+	
+	<!--jquery for marketo-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<!--marketo-->
+	<script type="text/javascript" src="//d16f8x4wee2da2.cloudfront.net/deploy/js/marketoUtil.js"></script>
+	<script src="//app-ab16.marketo.com/js/forms2/js/forms2.min.js"></script>
+
+	<!--jquery cookies for marketo-->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script>
+	</script>
 </head>
 
 <body>
@@ -42,6 +54,8 @@
 				'//www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-TN2SLZ');
+
+		mkt_report_UTM_attributes();
 	</script>
 	<!-- End Google Tag Manager -->
 
@@ -149,7 +163,7 @@
 		</div>
 
 		<div class="subscribe-form">
-			<p>Get all the news about Java 9.<br/>Subscribe to Takipi’s newsletter:</p>
+			<p>Get all the news about Java 9.<br/>Subscribe to the OverOps newsletter:</p>
 			<div class="subscribe-input">
 				<input type="email" id="subscribeEmail" placeholder="Your email" />
 				<a href="#" class="subscribe-button">Submit</a>
@@ -160,11 +174,11 @@
 
 	<footer id="footer">
 		<span>
-			<a href="https://www.takipi.com" target="_blank">Made with &hearts; by Takipi</a>
+			<a href="https://www.overops.com" target="_blank">Made with &hearts; by OverOps</a>
 		</span>
 		<span class="divider">|</span>
 		<span>
-			Questions? hello@takipi.com
+			Questions? hello@overops.com
 		</span>
 	</footer>
 
