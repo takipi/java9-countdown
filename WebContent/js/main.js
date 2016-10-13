@@ -49,32 +49,16 @@ $(function() {
 	$('a.twitter-share-button').attr('data-text', tweetText);
 	$('.tweet-this').attr('href', 'https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw&text=Only%20' + days + '%20days%20left%20until%20%23Java9%20is%20released!&tw_p=tweetbutton&url=http%3A%2F%2Fjava9countdown.xyz&via=overopshq')
 	
-	
 	/* Subscribe to blog form */
 	var submitSubscribeForm = function () {
 		var email = $('#subscribeEmail').val();
-		var listId = 'c8411940bf';
-		var listGroup = 'Source';
-		var groupName = 'Java9.xyz';
-		var url = 'http://mailchimp.takipi.com/subscribe/' + listId;
-		$.post(url, {
-			email: email,
-			listGroup: listGroup,
-			groupNames: groupName
-		}, function(response) {
-			if (response.result == 'success') {
-				$('.thanks-msg').html('Thanks!');
-				$('.subscribe-form .subscribe-input').hide();
-				$('.thanks-msg').fadeIn();
-			} else if (response.result == 'already-subscribed') {
-				$('.thanks-msg').html("You were already subscribed to this list, thanks!");
-				$('.subscribe-form .subscribe-input').hide();
-				$('.thanks-msg').fadeIn();
-			}
-		});
 		
-		//report to marketo
+		// report to marketo
 		mkt_handle_blogSubscription(email,'java9countdown');
+		
+		$('.thanks-msg').html('Thanks!');
+		$('.subscribe-form .subscribe-input').hide();
+		$('.thanks-msg').fadeIn();
 	}
 	/* Enter key handler */
 	$('#subscribeEmail').on('keyup', function(e) {
